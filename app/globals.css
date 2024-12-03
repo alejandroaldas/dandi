@@ -19,3 +19,13 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.bg-gradient-custom {
+  background: linear-gradient(90deg, #F8E1E1 0%, #E4E1F8 50%, #E1EBF8 100%);
+}
+
+@layer utilities {
+  .backdrop-blur {
+    backdrop-filter: blur(4px);
+  }
+}
