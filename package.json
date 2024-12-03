@@ -7,15 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf node_modules .next && npm install",
-    "postinstall": "npx tailwindcss init -p"
+    "clean": "rm -rf node_modules .next && yarn install",
+    "postinstall": "yarn tailwindcss init -p"
   },
   "dependencies": {
+    "@langchain/community": "0.3.16",
+    "@langchain/core": "0.3.20",
     "@supabase/supabase-js": "2.39.7",
+    "langchain": "0.3.6",
     "next": "14.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "2.4.1",
+    "typescript": "5.7.2",
     "uuid": "9.0.1"
   },
   "devDependencies": {
