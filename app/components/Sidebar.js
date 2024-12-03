@@ -31,7 +31,7 @@ export default function Sidebar() {
                 <path d="M50 20 L85 37.5 L85 62.5 L50 80 L15 62.5 L15 37.5 Z" fill="white" />
               </svg>
             </div>
-            {!isCollapsed && <span className="text-xl font-semibold">dandi</span>}
+            {!isCollapsed && <span className="text-xl font-semibold">dandis</span>}
           </Link>
         </div>
 
