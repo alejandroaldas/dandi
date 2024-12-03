@@ -11,10 +11,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <Toaster position="top-right" />
+    <html lang="en" className="h-full">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className={`${inter.className} h-full`}>
+        <div className="min-h-full">
+          {children}
+          <Toaster position="top-right" />
+        </div>
       </body>
     </html>
   );
