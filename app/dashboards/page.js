@@ -18,7 +18,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     fetchApiKeys();
-  }, []);
+  }, [fetchApiKeys]);
 
   return (
     <div className="flex min-h-screen">

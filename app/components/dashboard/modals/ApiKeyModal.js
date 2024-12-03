@@ -54,7 +54,7 @@ export default function ApiKeyModal({ onClose, onSubmit }) {
               />
             )}
             <p className="mt-1 text-xs text-gray-500">
-              * If the combined usage of all your keys exceeds your plan's limit, all requests will be rejected.
+              * If the combined usage of all your keys exceeds your plan&apos;s limit, all requests will be rejected.
             </p>
           </div>
         </div>

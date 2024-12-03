@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { toast } from 'react-hot-toast';
 import { supabase } from '@/utils/supabase';
 import { v4 as uuidv4 } from 'uuid';
@@ -7,7 +7,7 @@ export function useApiKeys() {
   const [apiKeys, setApiKeys] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchApiKeys = async () => {
+  const fetchApiKeys = useCallback(async () => {
     setIsLoading(true);
     try {
       const { data, error } = await supabase
@@ -23,7 +23,7 @@ export function useApiKeys() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
   const createApiKey = async ({ name, monthlyLimit }) => {
     if (!name.trim()) {
