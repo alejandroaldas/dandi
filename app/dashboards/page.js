@@ -21,31 +21,33 @@ export default function Dashboard() {
   }, [fetchApiKeys]);
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-gray-50">
       <Sidebar />
-      <div className="flex-1 p-8 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <div className="flex-1 p-8">
+        <div className="max-w-7xl mx-auto">
           {/* Header with breadcrumb */}
           <div className="mb-8">
-            <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
+            <div className="flex items-center gap-2 text-sm text-gray-500 mb-3 font-medium">
               <span>Pages</span>
-              <span>/</span>
-              <span>Overview</span>
+              <span className="text-gray-300">/</span>
+              <span className="text-gray-900">Overview</span>
             </div>
-            <h1 className="text-2xl font-semibold">Overview</h1>
+            <h1 className="text-2xl font-semibold text-gray-900 tracking-tight">Overview</h1>
           </div>
 
-          <CurrentPlan />
-          
-          <ApiKeysList
-            apiKeys={apiKeys}
-            isLoading={isLoading}
-            onCreateKey={createApiKey}
-            onDeleteKey={deleteApiKey}
-            onUpdateKey={updateApiKey}
-          />
+          <div className="space-y-8">
+            <CurrentPlan />
+            
+            <ApiKeysList
+              apiKeys={apiKeys}
+              isLoading={isLoading}
+              onCreateKey={createApiKey}
+              onDeleteKey={deleteApiKey}
+              onUpdateKey={updateApiKey}
+            />
 
-          <EmailUsageAlerts />
+            <EmailUsageAlerts />
+          </div>
         </div>
       </div>
     </div>
